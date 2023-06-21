@@ -6,3 +6,5 @@ user_spotify_credentials = SpotifyClientCredentials(client_id='84fd22c3658a41e4b
 sp = spotipy.Spotify(client_credentials_manager=user_spotify_credentials)
 
 print(sp.user(user='22knxy7shmeqilqxlktxwwldq'))
+
+# End
