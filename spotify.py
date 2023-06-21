@@ -7,4 +7,4 @@ sp = spotipy.Spotify(client_credentials_manager=user_spotify_credentials)
 
 print(sp)
 
-# End
+# End of changes
