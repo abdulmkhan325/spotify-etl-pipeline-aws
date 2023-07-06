@@ -9,10 +9,15 @@ This project is about building an ETL (Extract, TRansformation, load) pipeline u
 
 ### Key Learnings 
 -How to extract data from Spotify API 
+
 -Build an automated trigger to run data pipelines (CloudWatch EventBridge trigger) 
+
 -Write extract and transformation jobs (Lambda) and store raw data (S3) 
+
 -Build the correct bucket structure for data storage 
+
 -Automate transformation job (S3 trigger) for new data 
+
 -Build analytics layer for perfomaing SQL queries and business intelligence (Athena)
 
 ### Tools used: 
