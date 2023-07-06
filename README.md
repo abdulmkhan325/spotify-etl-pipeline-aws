@@ -20,8 +20,10 @@ This project is about building an ETL (Extract, TRansformation, load) pipeline u
 
 -Build analytics layer for perfomaing SQL queries and business intelligence (Athena)
 
+
 ### Tools used: 
 VSCode, Python, AWS services (CloudWatch, Lambda, S3, Glue and Athena)
+
 
 #### S3 
 AWS S3 provides a convenient and scalable solution for storing and accessing large volumes of data. Data is organized into buckets, and each file within S3 is referred to as an object.
@@ -39,3 +41,24 @@ AWS Glue Data Catalog was also used as it's a centralized metadata repository th
 #### Athena
 AWS Athena is a serverless query service provided by Amazon Web Services (AWS). It allows to analyze data stored in Amazon S3 using standard SQL queries without the need to set up and manage infrastructure.
 
+### Prerequisites:
+
+In order to access the Spotify API:
+
+- Create an account on the Spotify Developer Dashboard and register your application to obtain client credentials, including a Client ID and Client Secret.
+
+- Optionally, set up alarms on CloudWatch to receive email notifications for charges exceeding USD 5 and configure Free Tier Usage Alerts.
+
+- Create an S3 bucket with a globally unique name. I chose the us-east-1 region for the bucket. The S3 bucket will have the following folder structure.
+
+/aws-spotify-etl-majid: Main folder in bucket
+
+/raw_data: Raw data is stored here
+
+* to_be_processed: When the data extraction function is invoked, data extracted from the API will be stored here
+
+* processed: When the transformation function is invoked, files in to_process folder will be copied to this folder and the file in to_process will be deleted. We are just moving data from one folder to another.
+
+/transformed_data: These 3 folders will contain the transformed dataset where basic cleaning and transformation have been applied. * /album_data * /artist_data * /song_data
+
+/query-results: This was used as the storage location for AWS Athena's query processing
