@@ -51,7 +51,7 @@ In order to access the Spotify API:
 
 - Create an S3 bucket with a globally unique name. I chose the us-east-1 region for the bucket. The S3 bucket will have the following folder structure.
 
-/aws-spotify-etl-majid: Main folder in bucket
+/aws-spotify-etl: Main folder in bucket
 
 /raw_data: Raw data is stored here
 
